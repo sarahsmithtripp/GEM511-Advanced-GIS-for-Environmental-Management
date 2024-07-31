@@ -1,0 +1,3 @@
+[submodule "gem511"]
+	path = gem511
+	url = https://github.com/sarahsmithtripp/GEM511-Advanced-GIS-for-Environmental-Management.git
