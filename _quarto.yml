@@ -1,0 +1,37 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Open Geomatics Community of Practice"
+  chapters: 
+    - index.qmd
+    - 01-Introduction to Forestry Datasets in QGIS.qmd
+    - 02-VRI Forest Cover and Digital Imagery.qmd
+    - Course Data Description.qmd
+  sidebar: 
+    style: docked
+    background: light
+  search: true
+  cover-image: cover.png
+  # repo-url: XX
+  # repo-actions: [edit]
+  downloads: [pdf, epub]
+  page-navigation: true
+
+
+github:
+  repo: https://github.com/ubc-geomatics-community-of-practice/GEM510-GIS-for-Forestry-and-Conservation.git
+
+clean:
+  - book.bib
+  - bookdown.bbl
+  - packages.bib
+
+format:
+  html:
+    split-by: chapter
+  pdf:
+    documentclass: book
+    latex-engine: xelatex
+    citation-package: natbib

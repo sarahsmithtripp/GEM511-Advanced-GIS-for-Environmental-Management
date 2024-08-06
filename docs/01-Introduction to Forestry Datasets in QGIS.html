@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.310">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Open Geomatics Community of Practice - 2&nbsp; Introduction to Forestry Datasets in QGIS</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Course Data Description.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-Introduction to Forestry Datasets in QGIS.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Forestry Datasets in QGIS</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Open Geomatics Community of Practice</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Open-Geomatics-Community-of-Practice.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./Open-Geomatics-Community-of-Practice.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">FRST 556: Land Information Acquisition and Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-Introduction to Forestry Datasets in QGIS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Forestry Datasets in QGIS</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Course Data Description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Description for FRST 556 course data</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#lab-overview" id="toc-lab-overview" class="nav-link active" data-scroll-target="#lab-overview">Lab Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#task-1-set-up-qgis" id="toc-task-1-set-up-qgis" class="nav-link" data-scroll-target="#task-1-set-up-qgis">Task 1: Set Up QGIS</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1:</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2:</a></li>
+  </ul></li>
+  <li><a href="#task-2-making-a-site-index-map" id="toc-task-2-making-a-site-index-map" class="nav-link" data-scroll-target="#task-2-making-a-site-index-map">Task 2: Making a Site Index Map</a>
+  <ul class="collapse">
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3:</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4:</a></li>
+  <li><a href="#map-1" id="toc-map-1" class="nav-link" data-scroll-target="#map-1">Map 1</a></li>
+  </ul></li>
+  <li><a href="#task-3-visualize-stands-dominated-by-western-redcedar-in-1989" id="toc-task-3-visualize-stands-dominated-by-western-redcedar-in-1989" class="nav-link" data-scroll-target="#task-3-visualize-stands-dominated-by-western-redcedar-in-1989">Task 3: Visualize Stands Dominated by Western Redcedar in 1989</a>
+  <ul class="collapse">
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5:</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6:</a></li>
+  <li><a href="#sec-Q7" id="toc-sec-Q7" class="nav-link" data-scroll-target="#sec-Q7">Question 7:</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8:</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9:</a></li>
+  <li><a href="#map-2" id="toc-map-2" class="nav-link" data-scroll-target="#map-2">Map 2:</a></li>
+  </ul></li>
+  <li><a href="#task-4-compare-changes-in-western-redcedar-from-1999-to-1989" id="toc-task-4-compare-changes-in-western-redcedar-from-1999-to-1989" class="nav-link" data-scroll-target="#task-4-compare-changes-in-western-redcedar-from-1999-to-1989">Task 4: Compare Changes in Western Redcedar from 1999 to 1989</a>
+  <ul class="collapse">
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10:</a></li>
+  <li><a href="#question-11" id="toc-question-11" class="nav-link" data-scroll-target="#question-11">Question 11:</a></li>
+  <li><a href="#question-12" id="toc-question-12" class="nav-link" data-scroll-target="#question-12">Question 12:</a></li>
+  </ul></li>
+  <li><a href="#lab-questions-deliverables" id="toc-lab-questions-deliverables" class="nav-link" data-scroll-target="#lab-questions-deliverables">Lab Questions &amp; Deliverables</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="terrain-spatial-interpolation" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Forestry Datasets in QGIS</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in readLines(file, warn = readLines.warn): incomplete final line found
+on 'chapterauthors.yml'</code></pre>
+</div>
+</div>
+<p>Written by</p>
+<p>Sarah Smith-Tripp</p>
+<section id="lab-overview" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="lab-overview">Lab Overview</h2>
+<p>Foresters use maps to visualize site composition, leading tree species, and volume across a landbase. In this lab, we introduce the datasets enable forestry professionals to create these maps. The focus of the lab is not on the GIS approach, but rather becoming familiar enough with the data structure you feel empowered to create your own maps for a landbase. We will also do some simple calculations within QGIS to better understand the data structure and possible applications. This lab uses forest inventory data from Malcom Knapp Research Forest (MKRF)</p>
+<hr>
+</section>
+<section id="learning-objectives" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li><p>Import &amp; understand spatial data sets from MKRF</p></li>
+<li><p>Create a map that visualizes site indices</p></li>
+<li><p>Create a map for leading tree species and include descriptive statistics (area covered, XX YY)</p></li>
+<li><p>Calculate a volume estimates for western red-cedar in 1989</p></li>
+<li><p>Compare calculated values for 1989 to estimates for 1999 and discuss the changes</p></li>
+</ul>
+<hr>
+</section>
+<section id="data" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="data">Data</h2>
+<p>We will be working with GIS data available from Malcom Knapp Research forest. Description of data is included in <a href="Course Data Description.html#sec-data"><span>Section&nbsp;3.1</span></a>. ## Background {.unnumbered}</p>
+<p>Malcom Knapp Research Forest is a UBC affiliated research forest that is located near Maple Ridge, BC. The forest was established in 1949 and is managed by staff to be <em>commercially viable</em> and <em>financially independent</em> of UBC. The forest is ~5,000 ha and covers a large mountainous area. Most of the forest is located in the Coastal Western Hemlock (CWH) biogeoclimatic (BEC) zone. As a result, some of the trees are very large (&gt; 2 m than diameter and over 65 m).</p>
+<hr>
+</section>
+<section id="task-1-set-up-qgis" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="task-1-set-up-qgis">Task 1: Set Up QGIS</h2>
+<p><strong>Step 1:</strong> Open QGIS on your laptop. Choose ‘blank project.’ Save the project with a file name that you can remember and location you can remember. Ex: Exercise1_Map.qgz</p>
+<p>When you first open QGIS you will notice a main map canvas. To the left of this map canvas are two windows <strong>Browser</strong> and <strong>Layers</strong>. The <strong>Layers</strong> panel is the best way to understand the order of data on the main map canvas and is the best way to change the data presentation (symbology) and access the data in tabular format. On the top the QGIS menu are a series of additional buttons which we will introduce throughout this lab and course. Finally, on the bottom are the details of the map canvas including the current center or selected coordinate, the map scale, rotation, and the coordinate reference system (CRS)</p>
+<p><strong>Step 2:</strong> Set the project CRS. In BC, the provincial standard CRS is NAD83/BC Albers map projection (EPSG:3005). To set the projects CRS navigate to the bottom left of the window and click on the <strong>EPSG:4326 as shown below:</strong></p>
+<p>Search for EPSG:3005 and <strong>click apply</strong> and <strong>Ok</strong>.</p>
+<p><strong>Step 3:</strong> Set up a ‘favorites’ folder to easily access the MKRF data. Right click on ‘Favorites’ and click <strong>add a directory</strong>. Navigate to the storage location for you MKRF data. Click <strong>ok</strong></p>
+<section id="building-familiarity" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="building-familiarity">Building Familiarity</h4>
+<p><strong>Step 4:</strong> Add <strong>P_Boundary_MKRF.gpkg</strong> to the map. From the <strong>browser</strong> window select the file and <strong>drag and drop</strong> into the main map. This will add the boundary MRKF as a polygon feature. This layer is shown in the main map and listed in ‘layers’ on the left-hand ‘layers’ panel.</p>
+<p><strong>Step 5:</strong> Change the symbology of the boundary file by right clicking on <strong>P_Boundary_MKRF.gpkg</strong> in the layers pane. Select <strong>Properties</strong>. A window will pop-up. On the left-hand side the layer properties including: General, Source, Symbology, Labels, Fields, Joins, Diagrams. Select <strong>Symbology</strong> (The icon with the paintbrush). Keep the format as ‘single symbol.’ Change the layer to have a black outline with no fill by clicking on the icon ‘simple fill.’ Change the fill color to ‘transparent’ and the stroke width to ‘0.2’</p>
+<p><strong>Step 6:</strong> Add <strong>L_streams_major.gkpg</strong>. In the ‘layers’ panel this will be the first, reflecting that this layer is above the boundary file. Change the color to something that represents streams (like.. blue?)</p>
+<p><strong>Step 7:</strong> Navigate the around the map project by selecting the <img src="images/clipboard-2808075886.png" class="img-fluid"> icon. You can use the <img src="images/clipboard-1487886273.png" class="img-fluid" width="92"> to zoom and out.</p>
+<p><strong>Step 8:</strong> Add the <strong>P_lakes.gpgk</strong>. Right-click on this layer in the layers panel and select <strong>Attribute Table</strong>. This gives details about the polygon features of the dataset. The shape area for each has been calculated in the ‘Shape_Area’ field.</p>
+</section>
+<section id="question-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-1">Question 1:</h3>
+<p>How many features (i.e.&nbsp;shapes) are in the P_lakes.gpkg?</p>
+</section>
+<section id="question-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-2">Question 2:</h3>
+<p>Where are the high versus low site indices relative to the terrain, relative to the north versus south, and relative to roads?</p>
+<hr>
+</section>
+</section>
+<section id="task-2-making-a-site-index-map" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="task-2-making-a-site-index-map">Task 2: Making a Site Index Map</h2>
+<p><u>Site index is a measure of productivity</u>. It is technically defined as: <u><em>expected height (m) of the best trees (not damaged, biggest) of the dominant species at a reference age of 50 years breast height age</em></u>. The site index reflects the potential of the site to grow this dominant species. Although this might also indicate how another species might do, this does not give a measure of the possible productivity of another species. For example, a site that is douglas-fir leading and has a high site index would not indicate that a species like whitebark pine (a high alpine species) would also do well. Also, if the soils change (e.g., landslides, fertilization, etc.) or the climate/hydrology changes, the site index might not be a good an indicator of the productivity for the historically dominant species. Importantly, for site index to be reported there have to be trees in the stand. In the MKRF dataset some recently harvested stands may show a “0” for site index, but this is really an NA.</p>
+<p><strong>Step 1</strong> Load <strong>P_ForestCover_1989.gpkg</strong>. Right click on the layer in the <strong>layers</strong> window and select <strong>Open Attribute Table</strong>. this will open an attribute table that describes the polygon components. Click on the the heading for <strong>SITEINDX</strong> to sort the table from smallest to largest site index. Many polygons have “0.0 m” for a site index value. Scroll right to the “non-forest descriptor” or <strong>NFD</strong> columbn. Here notes like “NSR” note sites that are “not-satisfactorily restocked, or there may be lakes. These are examples of polygons where there are no trees and thus no site-index value.</p>
+<p><strong>Step 2</strong> Click to the <strong>SITEINDX</strong> column heading again to sort from largest to smallest. See <span class="quarto-unresolved-ref">?sec-Q3</span> to answer. Close the attribute table.</p>
+<p><strong>Step 3</strong> Right click on the <strong>P_ForestCover_1989</strong> layer again in the <strong>layers</strong> panel and select <strong>Properties</strong></p>
+<ol type="A">
+<li><p>Select <strong>Symbology</strong> and change the symbol from “single Symbol” to “Graduated”</p></li>
+<li><p>Under <strong>Value</strong> click the small down arrow on the right to select the “SITEINDX” column.</p></li>
+<li><p>In the <strong>Color ramp</strong> field click the small down arrow on the right to select the “Viridis” color palette</p></li>
+<li><p>At the bottom of the symbology window, select <strong>Classify</strong>. This will classify the values in “SITEINDX” based on their values into different colors associated with the viridis color ramp.</p></li>
+<li><p>Under <strong>Classify</strong> and <strong>Mode</strong> select “Equal Interval” and change the number of <strong>classes</strong> to “12”. Click <strong>Classify</strong> again.</p></li>
+<li><p>In the <strong>Classes</strong> pain (the main white box) change these to <strong>5 m classes</strong> as 0.00 to 0.00 (i.e., no site index), 0.05 to 5.05, 5.05 to 10.05, 10.05 to 15.05, etc.</p></li>
+<li><p>Click <strong>Apply and OK</strong>. The symbology window will close and you can now see your recolored layer</p></li>
+</ol>
+<p><img src="images/QGIS image.jpg" class="img-fluid"></p>
+<p><strong>Step 4</strong> Create a site index map to export as a picture. ::: {#tip-mapmaking .callout-tip} check out this link for some useful resources on making maps in QGIS :::</p>
+<ol type="A">
+<li><p>Select <strong>Project</strong> -&gt; <strong>New Print out</strong> <strong>Layout</strong>. Name your print layout “MRKF_1989SiteIndex” and click <strong>OK.</strong> A blank space appears in a new window with new Layout icons along the left-hand side.</p></li>
+<li><p>In the left-hand of this new window, select <img src="images/clipboard-3366220892.png" class="img-fluid"> to (<strong>Add a New Map to the Layout)</strong>. A <strong>+</strong> sign appears as a cursor. Drag the cursor around the blank area. Your map appears in this print layout. &nbsp;<strong>NOTE:</strong> If you do not see a map in <strong>Layout View</strong> use <strong>Zoom Whole Page</strong> =You may also need to reposition the map in the copied box using:</p></li>
+</ol>
+<p><img src="images/clipboard-3626068356.png" width="247" height="301"></p>
+<ol start="3" type="A">
+<li><p>In the left-hand of this new window, select <img src="images/clipboard-3366220892.png" class="img-fluid"> to (<strong>Add a New Map to the Layout)</strong>. A <strong>+</strong> sign appears as a cursor. Drag the cursor around the blank area. Your map appears in this print layout. &nbsp;<strong>NOTE:</strong> If you do not see a map in <strong>Layout View</strong> use <strong>Zoom Whole Page</strong> =You may also need to reposition the map in the copied box using:</p></li>
+<li><p><strong>Right click</strong> on your map and select <strong>Page Properties</strong>. Change the orientation from “landscape” to “portrait”. &nbsp;</p></li>
+<li><p><strong>Right click</strong> on the map again and select <strong>Item Properties</strong> this time. Change the map scale (see the right-hand side of your screen for the properties) to expand your map to fill the page.&nbsp; A good scale value is 50000 which means 1 cm on the map represents 0.5 km (50,000 cm)</p></li>
+<li><p>Use <img src="images/clipboard-559090363.png" class="img-fluid"> on the left-hand side to add a <strong>Legend</strong> (the + sign appears in the cursor, drag the cursor and Legend appears).</p></li>
+<li><p>Use <img src="images/clipboard-1747724821.png" class="img-fluid"> to add a <strong>Scale Bar.</strong> Click on the <strong>Item Properties</strong> box. Change the “Division Units” to kilometres and then select a scale graphic you like.</p></li>
+<li><p>Use <img src="images/clipboard-769114577.png" class="img-fluid"> to add a <strong>Title</strong>.</p></li>
+<li><p>Add a north arrow by clicking <img src="images/clipboard-1756855161.png" class="img-fluid"> and drag the curse to the map area.</p></li>
+<li><p>Right click on each item on your map and select <strong>Item Properties</strong> to make any other changes to improve the appearance of your map. Alternatively, on the right-hand side there is <strong>Item properties</strong> icon where you can change the style of the items you added to the map (i.e., north arrow, legend, your map). NOTE: One could spend many hours on this! Just do some improvements.</p></li>
+</ol>
+<p><strong>Step 5</strong> Export your map as an image. Go to <strong>Layout</strong> and select <strong>Export as Image.</strong> Save the image the same location as your document you are recording lab responses.</p>
+<section id="question-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-3">Question 3:</h3>
+<p>What was the largest site index in m? What was the leading or dominant species for that polygon? Give the full name and the Latin name for the species.</p>
+</section>
+<section id="question-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-4">Question 4:</h3>
+<p>Add 5 m contours onto your map canvas. Where are the high versus low site indices relative to the terrain, relative to the north versus south, and relative to roads?</p>
+</section>
+<section id="map-1" class="level3 unnumbered" style="Color: navy">
+<h3 class="unnumbered anchored" style="Color: navy" data-anchor-id="map-1">Map 1</h3>
+<p>Include your Site Index Map with a proper title, legend, scale, and arrow bar.</p>
+<p><img src="images/Map1.jpg" class="img-fluid"></p>
+<hr>
+</section>
+</section>
+<section id="task-3-visualize-stands-dominated-by-western-redcedar-in-1989" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="task-3-visualize-stands-dominated-by-western-redcedar-in-1989">Task 3: Visualize Stands Dominated by Western Redcedar in 1989</h2>
+<p><strong>Step 1</strong> Close the <strong>Layout</strong> window and go back to the <strong>Data view</strong> window again.</p>
+<p><strong>Step 2</strong> Change the <strong>fc_1989</strong>-layer properties to a <strong>Single Symbol</strong> again.</p>
+<p><strong>Step 3</strong> Right click on the <strong>fc_1989</strong> layer and choose <strong>Open Attribute Table</strong>. Each line of this table shows the attributes for one polygon (including <strong>SITEINDX</strong> that you already used). You can see the total number of polygons at the top of the <strong>Attribute Table</strong> (1149 polygons). Keep this attribute table open in this new window.</p>
+<p><strong>Step 4</strong> Select polygons where the first species is western redcedar and the cedar is more than 50% of the species composition. To do so you will use a “Query.” To select <u>polygons where the first species is western redcedar and more than 50% of the species composition,</u> you will need to do a Query.</p>
+<ol type="A">
+<li><p>In the <strong>Attribute Table</strong> select <img src="images/clipboard-3366763250.png" class="img-fluid"> to open up the <strong>Query Fields</strong></p></li>
+<li><p>Scroll down a bit to find “SPSC1” and “PCT1”, select for <strong>SPSC1</strong>=C and <strong>PCT1</strong>&gt;=50. Click <strong>Select Features</strong></p>
+<p><img src="images/clipboard-1889425914.png" class="img-fluid" width="360"></p></li>
+<li><p>Click the <img src="images/clipboard-633541715.png" class="img-fluid"> to return to the tabular format. You can see that we have now selected have a SPCS1 (leading species) of “C” for cedar, and that these polygons are &gt;= 50%. Use this to answer <strong>question 5</strong></p></li>
+</ol>
+<p><strong>Step 6</strong> Export your selection under it’s own shapefile. You can minimize or close the attribute table. In the <strong>layers</strong> panel right click and select <strong>Export -&gt; Save Selected Features As</strong> save this as a gpkg file in the same folder as your MRKF data. Name this <strong>P_FC_1989_CedarLeading.gpkg</strong>.</p>
+<p><strong>Step 7</strong> Calculate the area and volume of cedar dominant stands in 1989.</p>
+<ol type="A">
+<li><p>Click on the <strong>vector</strong> icon in the top menu and go to <strong>Analysis Tools -&gt; Basic Statistics for Fields</strong></p></li>
+<li><p>In the pop-up window select your P_FC_1989_CedarLeading shapefile. In the <strong>field to calculate statistics on</strong> click the downward arrow and select “Shape_Area.” Since this is a simple calculation, we will run this as a “temporary output.” Therefore, click <strong>Run</strong> on the bottom right.</p></li>
+</ol>
+<p>C. In the window that appears, find the <strong>count, mean, and sum values</strong>. Use these to answer <span class="quarto-unresolved-ref">?sec-Q7</span> and question 8.</p>
+<p><img src="images/clipboard-1197445832.png" class="img-fluid" width="464"></p>
+<p><img src="images/clipboard-30022994.png" class="img-fluid" width="342"></p>
+<p><strong>Step 9</strong> Calculate the merchantable volume in the 1989 cedar dominant stands.</p>
+<ol type="A">
+<li><p>Right click on the P_FC_1989_Cedarleading layer. Find the <strong>Field Calculator</strong> <img src="images/clipboard-1506137763.png" class="img-fluid"> tool.</p></li>
+<li><p>In the pop-up window make sure <strong>Create a new field</strong> is checked. Input a formula to calculate shape area on. To calculate volume for the polygon, we need to use a measure of volume for the area. We have <strong>VOL7_5</strong> which is the volume of trees per hectare that are &gt; 7.5 cm. We also have <strong>Shape_Area</strong> which is the area of the shape in m². We can use the following formula to calculate the volume per polygon</p>
+<p><span id="eq-volume"><span class="math display">\[Total~Volume (m³) = Polygon~Area (XX) * Volume (m³/ha) \tag{2.1}\]</span></span></p></li>
+<li><p>Do a unit calculation to set up the equation. Shape_area is in m² and VOL7_5 is in m³/ha. If we want output to be in m³ what value do we need for XX ?</p></li>
+<li><p>Name the field “m3_volume.” Change the <strong>Output field type</strong> to “Decimal number (real)” and click <strong>ok.</strong> Estimates for volume for each polygon will now appear. Use these outputs to answer <span class="quarto-unresolved-ref">?sec-Q9</span>.</p></li>
+<li><p>Use the <strong>Calculate basic statistics tool</strong> to calculate the average and total merchantable volumes in the cedar leading polygons.</p></li>
+</ol>
+<p><strong>Step 8</strong> Make a map of the polygons dominated by western redcedar. Look back towards <span class="citation" data-cites="tip-mapmaking">@tip-mapmaking</span> to remind yourself of the process and the essential components to include in your map.</p>
+<section id="question-5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-5">Question 5:</h3>
+<ol type="A">
+<li>How many western redcedar (&gt;= 50%) polygons were there in 1989?</li>
+<li>Where are they located?</li>
+<li>What polygons are not selected with the filter applied to the data?</li>
+</ol>
+</section>
+<section id="question-6" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-6">Question 6:</h3>
+<p>What is the FULL latin name for western redcedar (including the namer - a reference to the person that named the species)?</p>
+</section>
+<section id="sec-Q7" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-Q7">Question 7:</h3>
+<p>What is the average polygon size (ha) for the western redcedar dominated stands in 1989? NOTE: 10,000 m2=1 ha (i.e., 1 ha is 100m X 100 m = 10,000 m2)</p>
+</section>
+<section id="question-8" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-8">Question 8:</h3>
+<p>What is the total area in ha of all these selected polygons combined?</p>
+</section>
+<section id="question-9" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-9">Question 9:</h3>
+<p>What is the value of XX in <a href="#eq-volume">Equation&nbsp;<span>2.1</span></a> above? Using this equation, hat is the merchantable m3 volume (i.e., merchantable volume for trees 7.50 DBH or larger) for all these selected polygons combined? Do you feel like this a lot? (for reference a utility pole is 1m^^3)</p>
+</section>
+<section id="map-2" class="level3 unnumbered" style="Color: navy">
+<h3 class="unnumbered anchored" style="Color: navy" data-anchor-id="map-2">Map 2:</h3>
+<p>Include your map describing historically dominant cedar stands with a proper title, legend, scale, and arrow bar.</p>
+<hr>
+</section>
+</section>
+<section id="task-4-compare-changes-in-western-redcedar-from-1999-to-1989" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="task-4-compare-changes-in-western-redcedar-from-1999-to-1989">Task 4: Compare Changes in Western Redcedar from 1999 to 1989</h2>
+<p>Whew - you made it through the first interaction with QGIS in this course. Congrats 🎉. Your instructors used the same steps that you used for 989 to map and to get some statistics for western redcedar dominated stands, but this time for 1999.&nbsp; There were 1,220 polygons in 1999 and 170 were dominated by western redcedar (Figure 1). The average polygon size for these stands was 3.90 ha with a total number of ha of 662.53 ha. &nbsp;The merchantable volume for all of these stands combined was 319,903.0 m<sup>3</sup>.</p>
+<section id="question-10" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-10">Question 10:</h3>
+<p>Which year (1999 or 1989) had a large polygon size for western red-cedar dominated stands? Please answer in hectares.</p>
+</section>
+<section id="question-11" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-11">Question 11:</h3>
+<p>Did the m3 for all these selected polygons combined increase or decrease from 1989 to 1999?</p>
+</section>
+<section id="question-12" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="question-12">Question 12:</h3>
+<p>Based on your knowledge of forest dynamics so far, what might have caused these differences area and volume of western redcedar dominated stands between 1989 and 1999? HINT: Think about what human (e.g., new roads, harvests, silvicultural treatments, etc.) and natural (e.g., fires, landslides, etc.) disturbances may have occurred for MKRF in the CWH BEC zone in particular</p>
+<hr>
+</section>
+</section>
+<section id="lab-questions-deliverables" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="lab-questions-deliverables">Lab Questions &amp; Deliverables</h2>
+<ul class="task-list">
+<li><p><input type="checkbox">Complete answers to the following questions:</p>
+<ul class="task-list">
+<li><input type="checkbox">Question 1: How many features (i.e.&nbsp;shapes) are in the P_lakes.gpkg</li>
+<li><input type="checkbox">Question 2: Where are the high versus low site indices relative to the terrain, relative to the north versus south and relative to roads?</li>
+<li><input type="checkbox">Question 3: What was the largest site index in m? What was the leading or dominant species for that polygon? Give the full name and the Latin name for the species.</li>
+<li><input type="checkbox">Question 4: Where are the high versus low site indices relative to the terrain, relative to the north versus south, and relative to roads?</li>
+<li><input type="checkbox">Question 5: (a) How many western redcedar (&gt;= 50%) polygons were there in 1989? (b) Where are they located? (c) What polygons are not selected with the filter applied to the data?</li>
+<li><input type="checkbox">Question 6: What is the FULL latin name for western redcedar (including the namer - a reference to the person that named the species)?</li>
+<li><input type="checkbox">Question 7: What is the average polygon size (ha) for the western redcedar dominated stands in 1989? NOTE: 10,000 m2=1 ha (i.e., 1 ha is 100m X 100 m = 10,000 m2)</li>
+<li><input type="checkbox">Question 8: What is the total area in ha of all these selected polygons combined?</li>
+<li><input type="checkbox">Question 9: What is the merchantable m3 volume (i.e., merchantable volume for trees 7.50 DBH or larger) for all these selected polygons combined? Do you feel like this a lot? (for reference a utility pole is 1m^^3)</li>
+<li><input type="checkbox">Question 10: Which year (1999 or 1989) had a large polygon size for western red-cedar dominated stands? Please answer in hectares.</li>
+<li><input type="checkbox">Question 11: Did the m3 for all these selected polygons combined increase or decrease from 1989 to 1999</li>
+<li><input type="checkbox">Question 12. Based on your knowledge of forest dynamics so far, what might have caused these differences area and volume of western redcedar dominated stands between 1989 and 1999? HINT: Think about what human (e.g., new roads, harvests, silvicultural treatments, etc.) and natural (e.g., fires, landslides, etc.) disturbances may have occurred for MKRF in the CWH BEC zone in particular</li>
+</ul></li>
+<li><p><input type="checkbox">Complete Maps for :</p>
+<ul>
+<li><input type="checkbox">A site index map for Malcom Knapp Research Forest</li>
+<li><input type="checkbox">A map showing the locations of the Western Red Cedar leading forest polygons from 1989.</li>
+<li>Make sure that your map includes:
+<ul>
+<li>A title</li>
+<li>A scale bar</li>
+<li>A north arrow</li>
+<li>A proper legend</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">FRST 556: Land Information Acquisition and Analysis</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Course Data Description.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Description for FRST 556 course data</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

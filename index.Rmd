@@ -1,6 +1,6 @@
 --- 
-title: "GEM 511: Advanced GIS for Environmental Management"
-author: "Paul D. Pickell"
+title: "FRST 556: Land Information Acquisition and Analysis"
+author: "Chris Mulverhill (professor)\n Sarah Smith-Tripp (Teaching Assistant)"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
