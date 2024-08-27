@@ -106,7 +106,7 @@ NOTE: Remember that for a color rendition of an image, white objects reflect hig
 :::
 
 | E       | N      | Landcover | Red Brightness | Green Brightness | Blue Brightness |
-|------------|------------|------------|------------|------------|------------|
+|---------|--------|-----------|----------------|------------------|-----------------|
 | 1248400 | 481890 |           |                |                  |                 |
 | 1247760 | 848198 |           |                |                  |                 |
 | 1248195 | 483318 |           |                |                  |                 |
@@ -191,9 +191,9 @@ J.  Right click on the map on your map layout to **copy and paste** the map so t
 **Step 9** We'll now map the average green brightness value in these polygons.
 
 A.  Using your layer that we calculated zonal statistics on, which should still be colored black-to-white. Move this layer to the top of the map canvas.
-B.  Navigate back to your map layout. With the copied map selected change the name to "zonal mean." In the item properties tab click the circular "refresh" button. This will update the map to the current canvas layers. Click **Lock layers and Lock styles for Layer.** \
+B.  Navigate back to your map layout. With the copied map selected change the name to "zonal mean." In the item properties tab click the circular "refresh" button. This will update the map to the current canvas layers. Click **Lock layers and Lock styles for Layer.**\
     ![](images/clipboard-1003007197.png)
-C.  Copy the Legend from your polygons layer. Change the reference map to the zonal statistics layer. In the legend properties check "update all". Change the **Title** to "Mean Bit Brightness (Green Band)". \
+C.  Copy the Legend from your polygons layer. Change the reference map to the zonal statistics layer. In the legend properties check "update all". Change the **Title** to "Mean Bit Brightness (Green Band)".\
     ![](images/clipboard-798660786.png)
 D.  Right click on the map on your map layout to **copy and paste** the map so there is a duplicate map next to your forest zonal statistics map. With this map selected **uncheck** the **Lock layers and Lock styles for Layers**. Navigate back to your map canvas.
 
@@ -215,7 +215,7 @@ Include your map describing your forest polygon layer and the associated brightn
 
 ------------------------------------------------------------------------
 
-## Task 4: Satellite Images Compared to Aerial Photographs  {.unnumbered}
+## Task 4: Satellite Images Compared to Aerial Photographs {.unnumbered}
 
 Images collected using satellites provide the base data used to create Google Maps, Google Earth Views, etc. Of these, data collected on Landsat satellites is very commonly used. However, other imagery is often needed to provide finer spatial details, historic views, and 3-D views. You will learn more about other imagery in FRST 538. For now, you will look at the Landsat imagery provided for MKRF and compare these to the aerial photographs. Specifically, you will look at how these images might be used to update for natural and human disturbances.
 
@@ -252,7 +252,7 @@ What about using landsat data for something like small-scale wind damage? Or sma
     -   [ ] Question 6: Zoom into the locations noted on the table. Use the ![](images/clipboard-1450729439.png){width="27"} tool located in the upper right of QGIS to retrieve RGB values for the following areas. Once you have filled in the table, discuss why you think different landcovers have different pixel values.
 
         | E       | N      | Landcover | Red Brightness | Green Brightness | Blue Brightness |
-        |------------|------------|------------|------------|------------|------------|
+        |---------|--------|-----------|----------------|------------------|-----------------|
         | 1248400 | 481890 |           |                |                  |                 |
         | 1247760 | 848198 |           |                |                  |                 |
         | 1248195 | 483318 |           |                |                  |                 |
